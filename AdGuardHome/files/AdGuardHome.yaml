@@ -52,6 +52,8 @@ dns:
   blocked_hosts:
   - '||ip6.arpa^'
   - '||in-addr.arpa^'
+  - '||dbankcdn.cn^'
+  - '||dbankcdn.com^'
   trusted_proxies:
   - 127.0.0.0/8
   - ::1/128
