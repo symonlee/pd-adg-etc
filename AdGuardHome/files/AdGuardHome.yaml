@@ -67,6 +67,7 @@ dns:
   max_goroutines: 300
   handle_ddr: true
   ipset: []
+  ipset_file: ""
   filtering_enabled: true
   filters_update_interval: 24
   parental_enabled: false
