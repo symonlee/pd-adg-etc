@@ -83,6 +83,8 @@ dns:
   private_networks: []
   use_private_ptr_resolvers: false
   local_ptr_upstreams: []
+  serve_http3: false
+  use_http3_upstreams: false
 tls:
   enabled: false
   server_name: ""
