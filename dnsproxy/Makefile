@@ -5,12 +5,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=dnsproxy
-PKG_VERSION:=0.45.2
+PKG_VERSION:=0.45.3
 PKG_RELEASE:=$(AUTORELEASE)
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://codeload.github.com/AdguardTeam/dnsproxy/tar.gz/v$(PKG_VERSION)?
-PKG_HASH:=1c9c20f86621adebee6b61ee4bfba4b05b5e42a9ef66f01425d4e45987ff8d35
+PKG_HASH:=097faca17c262f4c53255aef2a5f6ca2c39168cf0046a476fe233946a3c8ea7a
 
 PKG_MAINTAINER:=Tianling Shen <cnsztl@immortalwrt.org>
 PKG_LICENSE:=Apache-2.0
