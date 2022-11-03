@@ -10,7 +10,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=AdGuardHome
 PROJECT_NAME:=AdGuardHome
-PKG_VERSION:=0.107.16
+PKG_VERSION:=0.107.17
 PKG_RELEASE:=1
 
 include $(INCLUDE_DIR)/package.mk
@@ -65,7 +65,7 @@ PKG_SOURCE_URL:=https://github.com/AdguardTeam/AdGuardHome/releases/download/v$(
 
 UNTAR_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)/$(PKG_NAME)-extract/$(PKG_ARCH_ADGUARDHOME)
 
-PKG_HASH:=ddca30322d3cd53231eb9760cc13fe624223e08070c8ad5877f827db32fd90e2
+PKG_HASH:=017a488cce09d8d712ff8a4907d5cec942a17e35c460be9717c5641051108edb
 
 define Build/Prepare
 	mkdir -vp $(UNTAR_DIR)
