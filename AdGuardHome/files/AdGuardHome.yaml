@@ -1,6 +1,5 @@
 bind_host: 0.0.0.0
 bind_port: 3000
-beta_bind_port: 0
 users:
   - name: root
     password: $2a$10$Nn.mhgwk4Hf5UWvkeHyGGeBZPqBhH6WHfEp2jnzeADxphD3dkk2HO
@@ -84,6 +83,8 @@ dns:
   private_networks: []
   use_private_ptr_resolvers: false
   local_ptr_upstreams: []
+  use_dns64: false
+  dns64_prefixes: []
   serve_http3: false
   use_http3_upstreams: false
 tls:
