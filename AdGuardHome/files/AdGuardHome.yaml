@@ -39,14 +39,6 @@ dns:
     - '[/time.windows.com/]211.138.180.3'
     - '[/time.nist.gov/]211.138.180.3'
     - '[/time.apple.com/]211.138.180.3'
-    - '[/nivod.com/]127.0.0.1:5335'
-    - '[/mudvod.tv/]127.0.0.1:5335'
-    - '[/newpppp.com/]127.0.0.1:5335'
-    - '[/vod360.net/]127.0.0.1:5335'
-    - '[/biggggg.com/]127.0.0.1:5335'
-    - '[/nbys.tv/]127.0.0.1:5335'
-    - '[/nbyy.tv/]127.0.0.1:5335'
-    - '[/nbys1.tv/]127.0.0.1:5335'
   upstream_dns_file: ""
   bootstrap_dns:
     - 211.138.180.2
@@ -120,15 +112,7 @@ filters:
     name: AdAway Default Blocklist
     id: 2
 whitelist_filters: []
-user_rules:
-  - '||nivod.tv^$dnstype=HTTPS'
-  - '||biggggg.com^$dnstype=HTTPS'
-  - '||mudvod.tv^$dnstype=HTTPS'
-  - '||newpppp.com^$dnstype=HTTPS'
-  - '||vod360.net^$dnstype=HTTPS'
-  - '||nbys.tv^$dnstype=HTTPS'
-  - '||nbyy.tv^$dnstype=HTTPS'
-  - '||nbys1.tv^$dnstype=HTTPS'
+user_rules: []
 dhcp:
   enabled: false
   interface_name: ""
