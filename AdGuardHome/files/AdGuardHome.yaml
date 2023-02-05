@@ -111,7 +111,7 @@ tls:
   private_key_path: ""
   strict_sni_check: false
 filters:
-  - enabled: false
+  - enabled: true
     url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
     name: AdGuard DNS filter
     id: 1
