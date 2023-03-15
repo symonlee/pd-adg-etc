@@ -2,7 +2,7 @@ bind_host: 0.0.0.0
 bind_port: 3000
 users:
   - name: root
-    password: $2a$10$Nn.mhgwk4Hf5UWvkeHyGGeBZPqBhH6WHfEp2jnzeADxphD3dkk2HO
+    password: $2a$10$bfP988DPx1UAdQvezUZ.d./twPfBeF2eis9uoXDl04DGcy085vWke
 auth_attempts: 5
 block_auth_min: 15
 http_proxy: ""
@@ -38,27 +38,31 @@ dns:
   bootstrap_dns:
     - 211.138.180.2
     - 211.138.180.3
-  all_servers: true
-  fastest_addr: false
+  all_servers: false
+  fastest_addr: true
   fastest_timeout: 1s
   allowed_clients: []
   disallowed_clients: []
   blocked_hosts:
-    - '||ip6.arpa^'
     - '||in-addr.arpa^'
-    - '||dbankcdn.cn^'
-    - '||dbankcdn.com^'
+    - '||ip6.arpa^'
+    - version.bind
+    - id.server
+    - hostname.bind
   trusted_proxies:
     - 127.0.0.0/8
     - ::1/128
-  cache_size: 4194304
+  cache_size: 900000
   cache_ttl_min: 43200
   cache_ttl_max: 86400
   cache_optimistic: true
   bogus_nxdomain: []
   aaaa_disabled: false
   enable_dnssec: false
-  edns_client_subnet: false
+  edns_client_subnet:
+    custom_ip: ""
+    enabled: false
+    use_custom: false
   max_goroutines: 300
   handle_ddr: true
   ipset: []
@@ -98,59 +102,26 @@ tls:
   private_key_path: ""
   strict_sni_check: false
 querylog:
-  enabled: true
+  enabled: false
   file_enabled: true
   interval: 24h
   size_memory: 1000
   ignored: []
 statistics:
-  enabled: true
+  enabled: false
   interval: 1
   ignored: []
 filters:
   - enabled: true
-    url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
-    name: AdGuard Simplified Domain Names filter
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt
+    name: AdGuard DNS filter
     id: 1
-  - enabled: true
-    url: https://adaway.org/hosts.txt
-    name: AdAway
+  - enabled: false
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_2.txt
+    name: AdAway Default Blocklist
     id: 2
-  - enabled: false
-    url: https://hosts-file.net/ad_servers.txt
-    name: hpHosts - Ad and Tracking servers only
-    id: 3
-  - enabled: false
-    url: https://www.malwaredomainlist.com/hostslist/hosts.txt
-    name: MalwareDomainList.com Hosts List
-    id: 4
-  - enabled: false
-    url: https://raw.githubusercontent.com/vokins/yhosts/master/data/tvbox.txt
-    name: tvbox
-    id: 1575018007
-  - enabled: false
-    url: https://cdn.jsdelivr.net/gh/neoFelhz/neohosts@gh-pages/full/hosts.txt
-    name: neoHosts full
-    id: 1575618240
-  - enabled: false
-    url: https://cdn.jsdelivr.net/gh/neoFelhz/neohosts@gh-pages/basic/hosts.txt
-    name: neoHosts basic
-    id: 1575618241
-  - enabled: false
-    url: http://sbc.io/hosts/hosts
-    name: StevenBlack host basic
-    id: 1575618242
-  - enabled: false
-    url: http://sbc.io/hosts/alternates/fakenews-gambling-porn-social/hosts
-    name: StevenBlack host+fakenews + gambling + porn + social
-    id: 1575618243
-  - enabled: false
-    url: https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/anti-ad-easylist.txt
-    name: anti-AD(Adblock+neohosts+yhosts+cjxlist+adhlist)
-    id: 1577113202
 whitelist_filters: []
-user_rules:
-  - ""
+user_rules: []
 dhcp:
   enabled: false
   interface_name: ""
@@ -187,4 +158,4 @@ os:
   group: ""
   user: ""
   rlimit_nofile: 0
-schema_version: 16
+schema_version: 17
